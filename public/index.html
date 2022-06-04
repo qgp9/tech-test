@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+    <h1>User List</h1>
+    <ul id="user-list"></ul>
+    <script>
+      const users = [
+        {
+          id: "john",
+          age: 35,
+          name: "Jhone Park"
+        },
+        {
+          id: "bob",
+          age: 22,
+          name: "Sponge Bob"
+        }
+      ];
+      const userListUl = users.map((user) => `<li><a ${user.name}`).join("");
+      console.log(userListUl);
+      document.getElementById("user-list").innerHTML = userListUl;
+    </script>
+  </body>
+</html>
